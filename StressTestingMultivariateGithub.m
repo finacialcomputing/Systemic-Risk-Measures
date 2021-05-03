@@ -2,11 +2,13 @@
 % Stress testing and systemic risk measures using elliptical conditional multivariate probabilities
 % https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3575512
 % Tomaso Aste 03/05/2021
-
+clear
+close all
 
 mod180 = @(x) x.*(x<=90)+(180-x).*(x>90);
 
 load DataGithub.mat
+
 O = cov(X0); %X0 are the log-returns
 
 Angle = NaN(length(SectorNames));
